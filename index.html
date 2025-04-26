@@ -54,49 +54,20 @@
 
         <section id="tracks" class="section">
             <h2>Challenge Tracks</h2>
-            <p>The Traffic3D Challenge 2025 focuses on three critical domains:</p>
+            <p>The Traffic3D Challenge 2025 focuses on two critical domains:</p>
 
             <div class="track">
-                <h3>Track 1: Railway Scene Point Cloud Semantic Segmentation</h3>
-                <p><strong>Dataset: WHU-Railway3D</strong></p>
+                <h3>Track 1: CMD Cross-Mechanism Domain Adaptation 3D Object Detection</h3>
+                <p><strong>Dataset: CMD: A Cross Mechanism Domain Adaptation Dataset for 3D Object Detection</strong></p>
                 <ul>
-                    <li><strong>Website:</strong> <a href="https://github.com/WHU-USI3DV/WHU-Railway3D" target="_blank">https://github.com/WHU-USI3DV/WHU-Railway3D</a></li>
-                    <li><strong>Challenge:</strong>
-                        <ul>
-                            <li>(1) Urban Railway: <a href="https://www.codabench.org/competitions/5138/" target="_blank">https://www.codabench.org/competitions/5138/</a></li>
-                            <li>(2) Rural Railway: <a href="https://www.codabench.org/competitions/5140/" target="_blank">https://www.codabench.org/competitions/5140/</a></li>
-                            <li>(3) Plateau Railway: <a href="https://www.codabench.org/competitions/5142/" target="_blank">https://www.codabench.org/competitions/5142/</a></li>
-                        </ul>
-                    </li>
-                    <li><strong>Data Description:</strong> 4.6 billion points across 30 km of railway, covering urban, rural, and plateau environments. The semantic annotation schema comprises 11 distinct categories, including critical infrastructure elements such as rails, track beds, masts, support devices, and overhead lines.</li>
-                    <li><strong>Tasks:</strong> Develop robust computational models for semantic segmentation of railway point clouds. The methodological focus encompasses addressing several domain-specific challenges: (1) the mitigation of occlusion artifacts induced by vegetation density and topographic variability; (2) the development of class-balanced learning strategies to compensate for the inherent density disparities across semantic categories; and (3) the implementation of domain generalization techniques.</li>
-                    <li><strong>Evaluation Metrics:</strong> Mean Intersection over Union (mIoU), per-category IoU scores, Overall Accuracy (OA), and category-specific performance metrics for railway-critical infrastructure elements.</li>
+                    <li><strong>Introduction:</strong> <a href="https://github.com/im-djh/CMD" target="_blank">https://github.com/im-djh/CMD</a></li>
+                    <li><strong>Challenge:</strong><a href="https://www.codabench.org/competitions/5138/" target="_blank">https://www.codabench.org/competitions/5138/</a></li>
+                    <li><strong>Data Description:</strong> The CMD dataset comprises three well-synchronised and precisely calibrated LiDAR mechanisms—128-beam mechanical, 32-beam mechanical, and solid/semi-solid-state—capturing 10 000 frames per sensor (50 sequences, 20 s each at 10 Hz). Data span a rich variety of environments, including urban, suburban, rural, highway, bridge, tunnel and campus settings, under five illumination conditions ranging from bright daylight to dusk.</li>
+                    <li><strong>Tasks:</strong> Participants must train detectors on point clouds from 128-beam or 32-beam mechanical LiDARs and, without any target-domain labels, generalise them to a hidden solid-state LiDAR test set for cross-mechanism domain adaptation 3D object detection.</li>
+                    <li><strong>Evaluation Metrics:</strong> Mean Average Precision (mAP) over four classes (Car, Truck, Pedestrian, Cyclist). Per-class APs reported as supplementary scores (IoU = 0.5 for Car/Truck, 0.25 for Ped/Cyc).</li>
                 </ul>
             </div>
 
-            <div class="track">
-                <h3>Track 2: Road Scene Point Cloud Semantic/Instance Segmentation</h3>
-                <p><strong>Dataset: WHU-Urban3D</strong></p>
-                <ul>
-                    <li><strong>Website:</strong> <a href="https://whu3d.com" target="_blank">https://whu3d.com</a></li>
-                    <li><strong>Challenge:</strong> <a href="https://www.codabench.org/competitions/7197/" target="_blank">https://www.codabench.org/competitions/7197/</a></li>
-                    <li><strong>Data Description:</strong> Integrated ALS and MLS point clouds covering over 3.6 million square meters of diverse urban typologies. The dataset is structured into more than 80 distinct urban blocks with exhaustive semantic annotations, providing complementary perspective modes (vertical and horizontal) of urban scenes.</li>
-                    <li><strong>Tasks:</strong> Develop integrated frameworks for concurrent semantic and instance segmentation of complex urban point clouds. The methodological challenges include: (1) accurate delineation of object boundaries in occluded urban canyons; (2) reliable detection and segmentation of small-scale urban elements with limited point representations; and (3) effective fusion of complementary information from multi-perspective scanning modalities.</li>
-                    <li><strong>Evaluation Metrics:</strong> Mean Intersection over Union (mIoU), per-category IoU values, Overall Accuracy (OA), mean coverage (mCov), mean weighted coverage (mWCov), mean precision (mPre), mean recall (mRec), and mean F1-score (mF1).</li>
-                </ul>
-            </div>
-
-            <div class="track">
-                <h3>Track 3: Road Scene Lane Mapping</h3>
-                <p><strong>Dataset: WHU-Lane</strong></p>
-                <ul>
-                    <li><strong>Website:</strong> <a href="https://github.com/WHU-USI3DV/LaneMapping" target="_blank">https://github.com/WHU-USI3DV/LaneMapping</a></li>
-                    <li><strong>Challenge:</strong> <a href="https://www.codabench.org/competitions/7489/" target="_blank">https://www.codabench.org/competitions/7489/</a></li>
-                    <li><strong>Data Description:</strong> High-resolution Mobile Laser Scanning (MLS) systems capturing over 98 kilometers of road infrastructure. The annotation schema provides granular classification of lane markings, differentiating between discontinuous and continuous demarcations, with instance-level identification for individual lane segments.</li>
-                    <li><strong>Tasks:</strong> Develop geometrically precise and topologically consistent methods for extracting lane polylines and their associated semantic attributes directly from MLS point clouds. The methodological emphasis is on generating accurate and topologically valid lane network representations without requiring extensive post-processing operations.</li>
-                    <li><strong>Evaluation Metrics:</strong> Precision, recall, and F1-scores for both geometric correspondence and semantic classification accuracy. The evaluation methodology will particularly emphasize algorithmic robustness to complex intersection geometries, discontinuous lane representations, and variable road surface conditions.</li>
-                </ul>
-            </div>
         </section>
 
         <section id="prizes" class="section">
